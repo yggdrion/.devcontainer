@@ -11,7 +11,8 @@ git config --global user.email "rapha@r4b2.de"
 git config --global user.name "r4b2"
 
 sudo apt update
-sudo apt -y install vim jq
+sudo apt -y install \
+    vim jq zip unzip curl wget netcat-openbsd uuid-runtime redis-tools bash-completion
 
 function get_latest_github_release_version() {
     curl -s "https://api.github.com/repos/${GH_ORG}/${GH_REPO}/releases/latest" | jq -r '.tag_name'
