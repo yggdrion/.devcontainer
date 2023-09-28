@@ -2,6 +2,7 @@
 
 GOSSM_VERSION="latest"
 SHFMT_VERSION="latest"
+SHELLCHECK_VERSION="latest"
 
 pip install --upgrade pip
 pip install -r requirements.txt
@@ -53,6 +54,23 @@ function install_shfmt {
     sudo chmod +x "/usr/local/bin/shfmt"
 }
 
+function install_shellcheck {
+    GH_ORG="koalaman"
+    GH_REPO="shellcheck"
+    if [[ "${SHELLCHECK_VERSION}" = "latest" ]]; then
+        SHELLCHECK_VERSION="$(get_latest_github_release_version)"
+    fi
+    DOWNLOAD_FILENAME="shellcheck-${SHELLCHECK_VERSION}.linux.x86_64.tar.xz"
+    curl -sL \
+        "https://github.com/${GH_ORG}/${GH_REPO}/releases/download/${SHELLCHECK_VERSION}/${DOWNLOAD_FILENAME}" \
+        -o "/tmp/${DOWNLOAD_FILENAME}"
+    tar -xf "/tmp/${DOWNLOAD_FILENAME}" -C "/tmp/"
+    sudo cp "/tmp/shellcheck-${SHELLCHECK_VERSION}/shellcheck" "/usr/local/bin/"
+    rm -rf "/tmp/shellcheck-${SHELLCHECK_VERSION}"
+    sudo chmod +x "/usr/local/bin/shellcheck"
+}
+
 install_session_manager
 install_gossm
 install_shfmt
+install_shellcheck
