@@ -10,6 +10,7 @@ pip install -r requirements-dev.txt
 
 git config --global user.email "rapha@r4b2.de"
 git config --global user.name "r4b2"
+git config --global pull.rebase false
 
 sudo apt update
 sudo apt -y install \
