@@ -28,7 +28,8 @@
                 "redhat.vscode-yaml",
                 "foxundermoon.shell-format",
                 "timonwong.shellcheck",
-                "golang.go"
+                "golang.go",
+                "humao.rest-client"
             ]
         }
     },
