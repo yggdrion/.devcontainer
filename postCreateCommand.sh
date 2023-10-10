@@ -6,7 +6,7 @@ SHELLCHECK_VERSION="latest"
 
 pip install --upgrade pip
 pip install -r requirements.txt
-pip install -r ./devcontainer/requirements.txt
+pip install -r .devcontainer/requirements.txt
 
 git config --global user.email "rapha@r4b2.de"
 git config --global user.name "r4b2"
@@ -14,7 +14,7 @@ git config --global pull.rebase false
 
 sudo apt update
 sudo apt -y install \
-    vim jq zip unzip curl wget netcat-openbsd uuid-runtime redis-tools bash-completion
+    vim jq zip unzip curl wget netcat-openbsd uuid-runtime redis-tools bash-completion dnsutils
 
 function get_latest_github_release_version() {
     curl -s "https://api.github.com/repos/${GH_ORG}/${GH_REPO}/releases/latest" | jq -r '.tag_name'
