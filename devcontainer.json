@@ -1,17 +1,16 @@
-// For format details, see https://aka.ms/devcontainer.json. For config options, see the
-// README at: https://github.com/devcontainers/templates/tree/main/src/python
 {
     "name": "dev",
-    // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
     "image": "mcr.microsoft.com/devcontainers/python:3.11",
-    // Features to add to the dev container. More info: https://containers.dev/features.
-    // "features": {},
-    // Configure tool-specific properties.
     "containerEnv": {
         "SAM_CLI_TELEMETRY": "0"
     },
+    "runArgs": [
+        "--init",
+        "--privileged",
+        "--cap-add=SYS_PTRACE",
+        "--network=host"
+    ],
     "customizations": {
-        // Configure properties specific to VS Code.
         "vscode": {
             "settings": {},
             "extensions": [
@@ -33,10 +32,10 @@
     },
     "features": {
         "ghcr.io/devcontainers/features/github-cli:1": {},
-        // "ghcr.io/devcontainers/features/docker-in-docker:2": {},
         "ghcr.io/devcontainers/features/aws-cli:1": {},
         "ghcr.io/devcontainers/features/git:1": {},
-        "ghcr.io/devcontainers/features/go:1": {}
+        "ghcr.io/devcontainers/features/go:1": {},
+        "ghcr.io/devcontainers/features/docker-in-docker:2": {}
     },
     // Use 'forwardPorts' to make a list of ports inside the container available locally.
     // "forwardPorts": [9000],
