@@ -5,8 +5,14 @@ SHFMT_VERSION="latest"
 SHELLCHECK_VERSION="latest"
 
 pip install --upgrade pip
-pip install -r requirements.txt
-pip install -r .devcontainer/requirements.txt
+
+REQUIREMENT_FILES="requirements.txt .devcontainer/requirements.txt"
+
+for REQUIREMENT_FILE in ${REQUIREMENT_FILES}; do
+    if [[ -f "${REQUIREMENT_FILE}" ]]; then
+        pip install -r "${REQUIREMENT_FILE}"
+    fi
+done
 
 git config --global user.email "rapha@r4b2.de"
 git config --global user.name "r4b2"
