@@ -18,6 +18,9 @@ git config --global user.email "rapha@r4b2.de"
 git config --global user.name "r4b2"
 git config --global pull.rebase false
 
+gh auth status
+git config --global --add 'credential.https://github.com.helper' '!gh auth git-credential'
+
 sudo apt update
 sudo apt -y install \
     vim jq zip unzip curl wget netcat-openbsd uuid-runtime redis-tools bash-completion dnsutils
