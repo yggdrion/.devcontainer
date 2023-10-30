@@ -2,7 +2,8 @@
     "name": "dev",
     "image": "mcr.microsoft.com/devcontainers/python:3.11",
     "containerEnv": {
-        "SAM_CLI_TELEMETRY": "0"
+        "SAM_CLI_TELEMETRY": "0",
+        "TZ": "Europe/Berlin"
     },
     "runArgs": [
         "--init",
