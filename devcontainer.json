@@ -51,7 +51,7 @@
         "source=${localEnv:HOME}${localEnv:USERPROFILE}/private/.aws,target=/home/vscode/.aws,type=bind,consistency=cached",
         "source=${localEnv:HOME}${localEnv:USERPROFILE}/private/.ssh,target=/home/vscode/.ssh,type=bind,consistency=cached",
         "source=${localEnv:HOME}${localEnv:USERPROFILE}/private/.config/gh,target=/home/vscode/.config/gh,type=bind,consistency=cached",
-        "source=dind-var-lib-docker,target=/var/lib/docker,type=volume"
+        //"source=dind-var-lib-docker,target=/var/lib/docker,type=volume"
         //"source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind,consistency=delegated",
         /*,
 		"source=devcontainer-frida,target=/workspaces/frida,type=volume",
@@ -60,7 +60,7 @@
 		"source=devcontainer-waschmaschine,target=/workspaces/waschmaschine,type=volume",
         "source=devcontainer-test,target=/workspaces/test,type=volume"
         */
-    ],
+    ]
     // Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
     // "remoteUser": "root"
 }
