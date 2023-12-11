@@ -84,3 +84,5 @@ install_session_manager
 install_gossm
 install_shfmt
 install_shellcheck
+
+curl -fsSL https://bun.sh/install | bash
