@@ -6,7 +6,7 @@ SHELLCHECK_VERSION="latest"
 
 pip install --upgrade pip
 
-REQUIREMENT_FILES="requirements.txt .devcontainer/requirements.txt"
+REQUIREMENT_FILES="requirements.txt .devcontainer/requirements.txt python/requirements.txt"
 
 for REQUIREMENT_FILE in ${REQUIREMENT_FILES}; do
     if [[ -f "${REQUIREMENT_FILE}" ]]; then
