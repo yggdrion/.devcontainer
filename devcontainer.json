@@ -30,24 +30,17 @@
                 "golang.go",
                 "humao.rest-client",
                 "mads-hartmann.bash-ide-vscode",
-                "ms-azuretools.vscode-docker",
-                "ms-python.vscode-pylance",
-                "ms-vscode-remote.remote-containers",
-                "ms-vscode-remote.remote-ssh",
-                "ms-vscode.live-server",
-                "PKief.material-icon-theme"
+                "ms-azuretools.vscode-docker"
             ]
         }
     },
     "features": {
-        "ghcr.io/devcontainers/features/github-cli:1": {},
-        "ghcr.io/devcontainers/features/aws-cli:1": {},
-        "ghcr.io/devcontainers/features/git:1": {},
-        "ghcr.io/devcontainers/features/go:1": {},
-        "ghcr.io/devcontainers/features/docker-in-docker:2": {},
-        "ghcr.io/devcontainers/features/node:1": {
-            "version": "20"
-        }
+        "ghcr.io/devcontainers/features/github-cli:latest": {},
+        "ghcr.io/devcontainers/features/aws-cli:latest": {},
+        "ghcr.io/devcontainers/features/git:latest": {},
+        "ghcr.io/devcontainers/features/go:latest": {},
+        "ghcr.io/devcontainers/features/docker-in-docker:latest": {},
+        "ghcr.io/devcontainers/features/node:latest": {}
     },
     "postCreateCommand": "bash ./.devcontainer/postCreateCommand.sh",
     "mounts": [
