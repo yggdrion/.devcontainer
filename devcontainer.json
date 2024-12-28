@@ -1,6 +1,6 @@
 {
     "name": "dev",
-    "image": "mcr.microsoft.com/devcontainers/python:3.12",
+    "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
     "containerEnv": {
         "SAM_CLI_TELEMETRY": "0",
         "TZ": "Europe/Berlin"
@@ -30,7 +30,12 @@
                 "golang.go",
                 "humao.rest-client",
                 "mads-hartmann.bash-ide-vscode",
-                "ms-azuretools.vscode-docker"
+                "ms-azuretools.vscode-docker",
+                "ms-python.vscode-pylance",
+                "ms-vscode-remote.remote-containers",
+                "ms-vscode-remote.remote-ssh",
+                "ms-vscode.live-server",
+                "PKief.material-icon-theme"
             ]
         }
     },
@@ -40,7 +45,10 @@
         "ghcr.io/devcontainers/features/git:latest": {},
         "ghcr.io/devcontainers/features/go:latest": {},
         "ghcr.io/devcontainers/features/docker-in-docker:latest": {},
-        "ghcr.io/devcontainers/features/node:latest": {}
+        "ghcr.io/devcontainers/features/node:latest": {},
+        "ghcr.io/devcontainers/features/python:latest": {
+            "version": "3.12"
+        }
     },
     "postCreateCommand": "bash ./.devcontainer/postCreateCommand.sh",
     "mounts": [
