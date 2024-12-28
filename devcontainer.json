@@ -1,6 +1,6 @@
 {
     "name": "dev",
-    "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+    "image": "mcr.microsoft.com/devcontainers/base:debian",
     "containerEnv": {
         "SAM_CLI_TELEMETRY": "0",
         "TZ": "Europe/Berlin"
