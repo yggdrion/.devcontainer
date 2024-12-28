@@ -17,7 +17,7 @@
             "extensions": [
                 "ms-python.python",
                 "github.copilot",
-	        "charliermarsh.ruff",
+                "charliermarsh.ruff",
                 "mutantdino.resourcemonitor",
                 "darrenlevine.auto-debug",
                 "sleistner.vscode-fileutils",
@@ -29,16 +29,13 @@
                 "timonwong.shellcheck",
                 "golang.go",
                 "humao.rest-client",
-                "foxundermoon.shell-format",
                 "mads-hartmann.bash-ide-vscode",
                 "ms-azuretools.vscode-docker",
                 "ms-python.vscode-pylance",
                 "ms-vscode-remote.remote-containers",
                 "ms-vscode-remote.remote-ssh",
                 "ms-vscode.live-server",
-                "PKief.material-icon-theme",
-                "redhat.vscode-yaml",
-                "sleistner.vscode-fileutils",
+                "PKief.material-icon-theme"
             ]
         }
     },
@@ -52,26 +49,10 @@
             "version": "20"
         }
     },
-    // Use 'forwardPorts' to make a list of ports inside the container available locally.
-    // "forwardPorts": [9000],
-    // Use 'portsAttributes' to set default properties for specific forwarded ports. 
-    // More info: https://containers.dev/implementors/json_reference/#port-attributes
-    // Use 'postCreateCommand' to run commands after the container is created.
     "postCreateCommand": "bash ./.devcontainer/postCreateCommand.sh",
     "mounts": [
         "source=${localEnv:HOME}${localEnv:USERPROFILE}/private/.aws,target=/home/vscode/.aws,type=bind,consistency=cached",
         "source=${localEnv:HOME}${localEnv:USERPROFILE}/private/.ssh,target=/home/vscode/.ssh,type=bind,consistency=cached",
-        "source=${localEnv:HOME}${localEnv:USERPROFILE}/private/.config/gh,target=/home/vscode/.config/gh,type=bind,consistency=cached",
-        //"source=dind-var-lib-docker,target=/var/lib/docker,type=volume"
-        //"source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind,consistency=delegated",
-        /*,
-		"source=devcontainer-frida,target=/workspaces/frida,type=volume",
-		"source=devcontainer-goblin,target=/workspaces/goblin,type=volume",
-		"source=devcontainer-aws-watcher,target=/workspaces/aws-watcher,type=volume",
-		"source=devcontainer-waschmaschine,target=/workspaces/waschmaschine,type=volume",
-        "source=devcontainer-test,target=/workspaces/test,type=volume"
-        */
+        "source=${localEnv:HOME}${localEnv:USERPROFILE}/private/.config/gh,target=/home/vscode/.config/gh,type=bind,consistency=cached"
     ]
-    // Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
-    // "remoteUser": "root"
 }
